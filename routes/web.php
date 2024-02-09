@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('home', compact('text')); // Passare la variabile alla vista utilizzando compact()
 });
 
+Route::get('/ciao', function () {
+    $text = 'ciaociao'; // Assegnare "Hello World" a una variabile
+    return view('home', compact('text')); // Passare la variabile alla vista utilizzando compact()
+});
+
 Route::get('/tecniche', function () {
     $tecniche = ["Ambliopya",
     "Narcoipnosi",
@@ -40,7 +45,7 @@ Route::get('/tecniche', function () {
 })->name('tecniche') ;
 
 Route::get('/magia_bianca', function () {
-    $magia_bianca = ['Energia',
+    $magie = ['Energia',
     'Energira',
     'Energiga',
     'Parafire',
@@ -62,11 +67,11 @@ Route::get('/magia_bianca', function () {
     'Rigene',
     'Sancta',
     'Risveglio'];
-    return view('magia_bianca', compact('magia_bianca')); // Passare la variabile alla vista utilizzando compact()
+    return view('magie', compact('magie')); // Passare la variabile alla vista utilizzando compact()
 })->name('magia_bianca') ;
 
 Route::get('/magia_nera', function () {
-    $magia_nera = [
+    $magie = [
         "Fire",
         "Fira",
         "Firaga",
@@ -88,7 +93,7 @@ Route::get('/magia_nera', function () {
         "Ultima"
     ]
     ;
-    return view('magia_nera', compact('magia_nera')); // Passare la variabile alla vista utilizzando compact()
+    return view('magie', compact('magie')); // Passare la variabile alla vista utilizzando compact()
 })->name('magia_nera') ;
 
 

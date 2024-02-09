@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 list-unstyled mt-5">
-                @foreach ($magia_bianca as $magia)
+                @foreach ($magie as $magia)
             <li>{{ $magia }}</li>
                 @endforeach
 
