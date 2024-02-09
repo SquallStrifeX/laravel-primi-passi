@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    $text = 'Hello World'; // Assegnare "Hello World" a una variabile
+    return view('home', compact('text')); // Passare la variabile alla vista utilizzando compact()
 });
